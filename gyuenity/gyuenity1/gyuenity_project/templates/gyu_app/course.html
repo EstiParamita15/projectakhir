@@ -1,0 +1,83 @@
+{% extends 'gyu_app/base.html' %}
+{% load static %}
+
+{% block head_block %}
+<link rel="stylesheet" href="{% static 'css/course.css' %}?v=1.0">
+{% endblock %}
+
+{% block body_block %}
+
+<section class="image-section">
+  <img src="{% static 'img/bg_about.png' %}" alt="bg" />
+  </section>
+
+<div class="container mt-5 pt-5 mb-5" style="padding-left: 15px; padding-right: 15px;">
+    <h2 class="text-center mb-4">Course in GYUENITY</h2>
+    <div class="row">
+        <!-- Macam course -->
+        <div class="col-md-4 mb-4">
+            <div class="card custom-card">
+                <img src="{% static 'img/uiux.jpg' %}" class="card-img-top" alt="uiux">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">DESAIN UI/UX</h5>
+                    <p class="card-text">Pelajari bagaimana merancang antarmuka pengguna (UI) yang menarik dan pengalaman pengguna (UX) yang intuitif untuk menciptakan aplikasi dan situs web yang mudah digunakan dan enak dilihat.</p>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'gyu_app:dashboard' %}" class="btn btn-gradient">Belajar Sekarang</a>
+                    {% else %}
+                        <button class="btn btn-gradient" data-bs-toggle="modal" data-bs-target="#loginModal">Belajar Sekarang</button>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <!-- Data Science -->
+        <div class="col-md-4 mb-4">
+            <div class="card custom-card">
+                <img src="{% static 'img/web.jpg' %}" class="card-img-top" alt="web">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">WEB DEVELOPMENT</h5>
+                    <p class="card-text">Pelajari keterampilan pengembangan web dengan menggunakan HTML, CSS, JavaScript, dan berbagai framework modern untuk membangun situs web dinamis dan responsif.</p>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'gyu_app:dashboard' %}" class="btn btn-gradient">Belajar Sekarang</a>
+                    {% else %}
+                        <button class="btn btn-gradient" data-bs-toggle="modal" data-bs-target="#loginModal">Belajar Sekarang</button>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <!-- Digital Marketing -->
+        <div class="col-md-4 mb-4">
+            <div class="card custom-card">
+                <img src="{% static 'img/techno.jpeg' %}" class="card-img-top" alt="Web">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">TECHNOPRENEURSHIP</h5>
+                    <p class="card-text">Pelajari cara bisnis teknologi dengan fokus pada inovasi digital dan mengembangkan strategi pemasaran online.</p>
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'gyu_app:dashboard' %}" class="btn btn-gradient">Belajar Sekarang</a>
+                    {% else %}
+                        <button class="btn btn-gradient" data-bs-toggle="modal" data-bs-target="#loginModal">Belajar Sekarang</button>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Register atau Login Terlebih Dahulu!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Klik tombol di bawah untuk mengakses course lebih jauh.
+            </div>
+            <div class="modal-footer">
+                <a href="{% url 'gyu_app:login' %}?next={% url 'gyu_app:dashboard' %}" class="btn btn-primary">SignIn</a>
+                <a href="{% url 'gyu_app:signup' %}?next={% url 'gyu_app:dashboard' %}" class="btn btn-primary">SignUp</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

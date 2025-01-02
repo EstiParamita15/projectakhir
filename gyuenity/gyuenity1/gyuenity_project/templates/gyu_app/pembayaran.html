@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+{% load static %}
+<html ng-app="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FORM PAY</title>
+    <link rel="stylesheet" href="{% static 'css/pembayaran.css' %}">
+    <script src="{% static 'js/pembayaran.js' %}" type="text/javascript"></script>
+</head>
+<body>
+<div class="container">
+    <h1 style="margin:10px;">PAYMENT</h1>
+    <form id="paymentForm" onsubmit="return handlePayment(event)" action="{% url 'gyu_app:pembayaran' %}" method="post">
+        {% csrf_token %}
+        <!-- Input Nama -->
+        <div class="form-group">
+            <label for="nama">User:</label>
+            <input required class="input-form" type="text" name="nama" id="nama" placeholder="username">
+        </div>
+
+        <!-- Input Email -->
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input required class="input-form" type="email" name="email" id="email" placeholder="eduquests@gmail.com">
+        </div>
+
+        <!-- Input Phone -->
+        <div class="form-group">
+            <label for="nohp">Phone:</label>
+            <input required class="input-form" type="text" name="nohp" id="nohp" placeholder="+62" pattern="\d+" title="Hanya diperbolehkan angka">
+        </div>
+
+        <!-- Dropdown untuk memilih kelas -->
+        <div class="form-group">
+            <label for="selectKelas">Pilih Kelas:</label>
+            <select id="selectKelas" class="input-form" onchange="updateClassAndPrice()">
+                <option value="1" data-price="3000000">Web Development</option>
+                <option value="2" data-price="2500000">Desain UI/UX</option>
+                <option value="3" data-price="2000000">Technopreneurship</option>
+            </select>
+        </div>
+
+        <!-- Kelas -->
+        <div class="form-group">
+            <label for="kelas">Class:</label>
+            <input disabled class="input-form-number" type="number" id="kelas" value="1">
+        </div>
+
+        <!-- Harga -->
+        <div class="form-group">
+            <label for="harga">Harga:</label>
+            <input disabled class="input-form-number" type="number" id="harga" value="3000000">
+        </div>
+
+        <!-- Pilihan Metode Pembayaran -->
+        <div style="overflow-x:auto;">
+            <label>Pilih Metode Pembayaran</label>
+            <table border=0 cellpadding="10">
+                <tr>
+                    <th><input type="radio" name="metode" value="BNI" required><img src="{% static 'img/bni.png' %}" width="60px" height="20px"></th>
+                    <th><input type="radio" name="metode" value="BCA" required><img src="{% static 'img/logo-bca.png' %}" width="60px" height="20px"></th>
+                    <th><input type="radio" name="metode" value="BRI" required><img src="{% static 'img/bri.png' %}" width="60px" height="25px"></th>          
+                </tr>
+                <tr>
+                    <th><input type="radio" name="metode" value="ALFAMART" required><img src="{% static 'img/alfa.jpg' %}" width="70px" height="50px"></th>
+                    <th><input type="radio" name="metode" value="INDOMARET" required><img src="{% static 'img/indomaret.png' %}" width="60px" height="20px"></th>
+                    <th><input type="radio" name="metode" value="GOPAY" required><img src="{% static 'img/gopay.jpg' %}" width="65px" height="40px"></th>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Tombol -->
+        <button type="submit" class="btn-form-pay" id="bayarBtn" onclick="handlePayment()">Bayar</button>
+        <button type="button" class="btn-form-change" id="myBtn" onclick="cancelPayment()">Batal</button>
+
+    </form>
+</div>
+
+
+
+<!-- Popup for successful payment -->
+<div id="popup" class="popup">
+    <h2>Payment Successful!</h2>
+    <p>Your payment has been processed successfully.</p>
+    <button class="btn" onclick="coba()">Lanjut Kelas</button>
+</div>
+
+<!-- Overlay for popup -->
+<div id="overlay" class="overlay"></div>
+<script src="{% static 'js/pembayaran.js' %}"></script>
+
+</body>
+<script>
+
+function cancelPayment() {
+    const confirmCancel = confirm("Apakah Anda yakin ingin membatalkan pembayaran?");
+    if (confirmCancel) {
+        window.location.href = "{% url 'gyu_app:courses' %}";
+    }
+}
+
+    function coba(){
+    fetch('set-session/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRFToken': '{{ csrf_token }}'
+        },
+        body: JSON.stringify({ paymentStatus: 'success' }) // Data tambahan bisa ditambahkan jika diperlukan
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.message); // Menampilkan pesan sukses
+        // Redirect ke halaman kelas setelah sesi diperbarui
+const selectedClass = document.getElementById('selectKelas').value;
+
+// Buat URL dinamis berdasarkan kelas yang dipilih
+const url = `/gyu_app/class${selectedClass}`; 
+
+// Redirect ke URL yang sesuai
+window.location.href = url;
+
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+
+</script>
+</html>

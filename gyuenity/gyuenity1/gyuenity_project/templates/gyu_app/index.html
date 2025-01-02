@@ -1,0 +1,330 @@
+{% extends 'gyu_app/base.html' %}
+{% load static %}
+
+{% block head_block %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
+{% block body_block %}
+
+<div class="scroll">
+    <a href="#" class="scrolltop" id="scroll-top">
+      <i class="bi bi-arrow-up-circle"></i>
+    </a>
+  </div>
+
+<!--content 1-->
+<br />
+<br />
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-text"data-aos="fade-up" data-aos-duration="1000">
+      <h1>Welcome to GYUENITY</h1>
+      <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+      Tempat di mana perjalananmu menuju dunia digital dimulai.
+      Kami percaya setiap orang memiliki potensi yang luar biasa. 
+      Dengan panduan praktis, materi lengkap, dan komunitas yang mendukung, 
+      kami hadir untuk mewujudkan impian dan membangun masa depan. 
+      Saatnya belajar, berkembang, dan menjadi yang terbaik.
+      </p>
+      <a href="{% url 'gyu_app:about' %}" class="btn btn-outline-primary">Pelajari Lebih Lanjut</a>
+    </div>
+    <div class="hero-image">
+      <div class="box animate__animated animate__fadeInRight animate__delay-1s">
+      <img src="{% static 'img/atas.jpg' %}" alt="gyuenity" />
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Grid content 2 -->
+<section class="grid">
+  <div class="container">
+    <div class="grid-box">
+      <h1 class="fw-bold mb-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">Program terbaik di bidang teknologi dan bisnis.</h1>
+      <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Kelas-kelas terbaik untuk meningkatkan kompetensi Anda di dunia digital dan kreatif. Kembangkan keterampilan baru, dan raih peluang karir di masa depan!</p>
+      <div class="row g-3 text-center pt-2">
+        <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="service p-4 mb shadow bg-info text-black rounded-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+
+                    <img src="{% static 'img/uiux.jpg' %}" class="img-fluid img-thumbnail" alt="ui/ux">
+                    <h4 class="mb-3 fw-bold" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">DESAIN UI/UX</h4>
+                    <p class="lh-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="450"> Ciptakan desain yang memukau dan pengalaman pengguna yang luar biasa. 
+                      Pelajari prinsip desain UI/UX, untuk merancang antarmuka intuitif dan menarik, serta kuasai teknik pengujian 
+                      untuk memastikan produk optimal.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="service p-4 shadow bg-info text-black rounded-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
+                    <img src="{% static 'img/web.jpg' %}" class="img-thumbnail" alt="web">
+                    <h4 class="mb-3 fw-bold" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">WEB DEVELOPMENT</h4>
+                    <p class="lh-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="550">Tingkatkan keterampilan coding Anda dengan mempelajari 
+                    pengembangan web dari dasar hingga tingkat lanjut. Kuasai HTML, CSS, JavaScript, 
+                    dan framework untuk membangun aplikasi dan situs web yang modern, responsif dan dinamis.</p>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="service p-4 shadow bg-info text-black rounded-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="950">
+                    <img src="{% static 'img/techno.jpeg' %}" class="img-thumbnail" alt="techno">
+                    <h4 class="mb-3 fw-bold" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">TECHNOPRENEURSHIP</h4>
+                    <p class="lh-lg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="650">Pelajari cara mengidentifikasi peluang bisnis berbasis teknologi, 
+                      membangun model bisnis yang inovatif, dan menerapkan strategi pemasaran 
+                      untuk memulai dan mengembangkan startup yang sukses.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Grid end -->
+
+<!-- Content 3 -->
+<section class="container content-3">
+  <div class="row">
+    <h1 class="mt-5 mb-4" data-aos="fade-up" data-aos-duration="1000">Mari Bergabung Bersama Kami di GYUENITY!</h1>
+    <h5 class=" mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Kami menyediakan fasilitas untuk mendukung
+      pembelajaran Anda dan membuka peluang baru di dunia digital.</h5>
+
+    <div class="row align-items-center mb-6">
+      <div class="col-lg-6 custom-col mb-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+        <h3>Materi Terstruktur dan Berkualitas</h3>
+        <p>Kursus kami dirancang dengan materi terstruktur untuk 
+        membangun keahlian Anda mulai dari dasar hingga tingkat lanjutan. 
+        Dengan pendekatan proyek langsung, Anda akan belajar sambil menciptakan karya nyata.</p>
+      </div>
+      <div class="col-md-6 mb-4">
+        <img src="{% static 'img/materi.png' %}"class="w-100 rounded" alt="materi">
+      </div>
+    </div>
+    <div class="row align-items-center mb-6">
+      <div class="col-lg-6 custom-col mb-4" style="max-width: 500px; margin-left: 10px;">
+        <img src="{% static 'img/mentor.jpg' %}" class="w-100 rounded" alt="konten">
+      </div>
+      <div class="col-md-6 mb-4" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+        <h3>Mentor Berpengalaman</h3>
+        <p>Belajar langsung dari para ahli dan praktisi yang telah sukses di industri.
+        Mentor kami tidak hanya mengajarkan teori, tetapi juga memberikan 
+        wawasan praktis dari pengalaman mereka.</p>
+      </div>
+    </div>
+    <div class="row align-items-center mb-6">
+      <div class="col-lg-6 custom-col mb-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+        <h3>Akses Tanpa Batas</h3>
+        <p>Platform pembelajaran kami dirancang fleksibel sehingga 
+        Anda dapat belajar sesuai waktu dan tempat yang Anda tentukan sendiri.</p>
+      </div>
+      <div class="col-md-6 mb-5">
+        <img src="{% static 'img/akses.jpeg' %}" class="w-100 rounded" alt="konten">
+      </div>
+  </div>
+  <div class="row align-items-center mb-6">
+    <div class="col-lg-6 custom-col mb-4" style="max-width: 500px; margin-left: 10px;">
+      <img src="{% static 'img/ramah.jpeg' %}"class="w-100 rounded" alt="konten">
+    </div>
+    <div class="col-md-6 mb-4" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+      <h3>Platform yang Ramah Pengguna</h3>
+      <p>Desain antarmuka kami memastikan terciptanya wawasan dan mudah digunakan, 
+      Anda mendapatkan pengalaman belajar yang nyaman dan efektif.</p>
+    </div>
+  </div>
+</section>
+
+<!-- content 4 TESTIMONI -->
+<section class="container mt-5 content-4">
+  <h3 class="text-center">Testimoni </h3>
+  <h1 class="text-center mb-5">Apa Kata Mereka?</h1>
+  <!-- Carousel -->
+  <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner ">
+      <div class="carousel-item active">
+        <div class="row p-3">
+          <div class="col-md-4">
+            <div class="testimonial-card text-center">
+              <div class="overlay"></div>
+              <div class="content">
+                <img src="{% static 'img/dewi.jpg' %}" class="rounded-circle mx-auto d-block" alt="logo" width="100px">
+                <p class="testimonial-author">Dewi Anindya</p>
+                <p>
+                  <i class="fas fa-star" style="color: gold;"></i>
+                  <i class="fas fa-star" style="color: gold;"></i>
+                  <i class="fas fa-star" style="color: gold;"></i>
+                  <i class="fas fa-star" style="color: gold;"></i>
+                  <i class="fas fa-star" style="color: gold;"></i>
+                </p>
+                <p class="testimonial-text mt-5">
+                  Saya awalnya merasa ragu untuk<span id="dots1">...</span>
+                  <span id="more1" class="hidden-text">
+                    belajar coding karena saya tidak punya dasar sama sekali. 
+                    Tapi, dengan bimbingan mentor yang sabar, saya berhasil membuat proyek web pertama saya dengan hasil yang memuaskan.</span>
+                </p>
+                <button class="read-more-btn" id="readMoreBtn1">Tampilkan lebih banyak</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card text-center">
+              <div class="overlay"></div>
+              <div class="content">
+                <img src="{% static 'img/mandala.jpg' %}" class="rounded-circle mx-auto d-block" alt="logo" width="100px">
+                <p class="testimonial-author">Mandala Saputra</p>
+                  <p>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                  </p>
+                <p class="testimonial-text mt-5">
+                  Kursus Technopreneurship di sini benar-benar<span id="dots2">...</span>
+                  <span id="more2" class="hidden-text">
+                  membuka wawasan saya tentang cara membangun bisnis digital.
+                  Dengan bimbingan mentor yang berpengalaman, saya sekarang memiliki 
+                  rencana bisnis yang solid dan mulai menjalankan startup saya. 
+                  Terima kasih untuk pengalaman yang luar biasa ini!</span>
+                </p>
+                <button class="read-more-btn" id="readMoreBtn2">Tampilkan lebih banyak</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card text-center">
+              <div class="overlay"></div>
+              <div class="content">
+                <img src="{% static 'img/riana.jpg' %}" class="rounded-circle mx-auto d-block" alt="logo" width="100px">
+                <p class="testimonial-author">Riana Kusuma</p>
+                  <p>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                  </p>
+                <p class="testimonial-text mt-5">
+                  Materinya sangat terstruktur dan relevan dengan
+                  <span id="dots3">...</span>
+                  <span id="more3" class="hidden-text">
+                  kebutuhan industri saat ini. Mentor selalu siap membantu, 
+                  dan komunitas belajar di sini sangat suportif. Saya merasa 
+                  percaya diri menghadapi dunia digital setelah mengikuti kursus di platform ini.</span>
+                </p>
+                <button class="read-more-btn" id="readMoreBtn3">Tampilkan lebih banyak</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row p-3">
+          <div class="col-md-4">
+            <div class="testimonial-card text-center">
+              <div class="overlay"></div>
+              <div class="content">
+                <img src="{% static 'img/batara.jpg' %}"class="rounded-circle mx-auto d-block" alt="logo" width="100px">
+                <p class="testimonial-author">Batara Atmadja</p>
+                  <p>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                  </p>
+                <p class="testimonial-text mt-5">
+                  Dengan jadwal kerja yang padat,<span id="dots4">...</span>
+                  <span id="more4" class="hidden-text">
+                  saya sangat terbantu dengan fleksibilitas belajar di platform ini. 
+                  Materinya bisa diakses kapan saja, sehingga saya tetap bisa belajar tanpa mengganggu pekerjaan saya.</span>
+                </p>
+                <button class="read-more-btn" id="readMoreBtn4">Tampilkan lebih banyak</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card text-center">
+              <div class="overlay"></div>
+              <div class="content">
+                <img src="{% static 'img/karina.jpg' %}" class="rounded-circle mx-auto d-block" alt="logo" width="100px">
+                <p class="testimonial-author">Karina Putri</p>
+                  <p>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                  </p>
+                <p class="testimonial-text mt-5">
+                  Materi yang disajikan benar-benar<span id="dots5">...</span>
+                  <span id="more5" class="hidden-text">
+                  sesuai dengan tren teknologi terkini. 
+                  Saya belajar banyak tentang desain UI/UX, 
+                  dan sekarang saya lebih percaya diri mengerjakan proyek desain untuk klien saya.</span>
+                </p>
+                <button class="read-more-btn" id="readMoreBtn5">Tampilkan lebih banyak</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="testimonial-card text-center">
+              <div class="overlay"></div>
+              <div class="content">
+                <img src="{% static 'img/ghea.jpg' %}" class="rounded-circle mx-auto d-block" alt="logo" width="100px">
+                <p class="testimonial-author">Ghea Talitha</p>
+                  <p>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                    <i class="fas fa-star" style="color: gold;"></i>
+                  </p>
+                <p class="testimonial-text mt-5">
+                  Saya mengikuti kursus Web Development di platform ini, <span id="dots6">...</span>
+                  <span id="more6" class="hidden-text">
+                  dan saya sangat puas dengan materi dan bimbingannya. 
+                  Penjelasan mentor sangat jelas, dan materi yang disediakan mudah dipahami, 
+                  bahkan untuk pemula seperti saya. Sekarang saya sudah bisa membuat website profesional sendiri. 
+                  Saya merekomendasikan platform untuk siapa saja yang ingin belajar teknologi.</span>
+                </p>
+                <button class="read-more-btn" id="readMoreBtn6">Tampilkan lebih banyak</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <script src="{% static 'js/index.js' %}"></script>
+</section>
+<!-- End content TESTIMONI -->
+
+<section class="trusted-companies text-center px-4 pt-5">
+  <p>Trusted by 100+ Companies in Indonesia</p>
+  <div class="company-logos" id="company">
+    <img src="{% static 'img/google.png' %}" alt="Google" />
+      <img src="{% static 'img/airbnb.jpg' %}"alt="Airbnb" />
+      <img src="{% static 'img/facebook.png' %}" alt="Facebook" />
+      <img src="{% static 'img/bumn.png' %}" alt="Bumn" />
+      <img src="{% static 'img/grab.png' %}" alt="Grab" />
+      <img src="{% static 'img/tokopedia.png' %}" alt="Tokopedia" />
+      <img src="{% static 'img/telkom.png' %}" alt="Telkom" />
+      <img src="{% static 'img/gojek.png' %}"alt="Gojek" />
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+  }
+
+.custom-button {
+    background: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin-top: -20px;
+    position: absolute;
+    left: 12px;
+    cursor: pointer;
+  
+    /* Tambahkan ini untuk menghilangkan underline pada elemen <a> */
+    text-decoration: none;
+    
+    /* Hilangkan outline saat elemen fokus */
+    outline: none;
+  
+    /* Untuk beberapa browser yang menggunakan gaya default pada fokus */
+    box-shadow: none;
+  }
+ 
+  .custom-button:hover .custom-icon {
+    color: #007bff; /* Warna saat di-hover */
+  }
+  
+
+  .card {
+    border:  2px solid #319eb2;; /* Hilangkan border default */
+    border-radius: 15px; /* Tambahkan border radius */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Tambahkan bayangan */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efek transisi */
+    overflow: hidden; /* Hindari elemen keluar dari kartu */
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Angkat kartu saat hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25); /* Perkuat bayangan saat hover */
+    border-color: #74ccf1;
+}
+
+.card img {
+    border-top-left-radius: 15px; /* Membulatkan gambar sesuai kartu */
+    border-top-right-radius: 15px;
+    object-fit: contain;
+    width: 100%; /* Pastikan gambar memenuhi lebar kartu */
+    height: 200px; /* Tetapkan tinggi tetap */
+    
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #319eb2; /* Gunakan warna yang konsisten */
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #555; /* Gunakan warna teks yang lembut */
+    text-align: justify;
+}
+
+.custom-gradient-btn {
+  background: linear-gradient(90deg, #168989, #429ab1);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-gradient-btn:hover {
+  background: #27b1e3; /* Warna lebih gelap saat hover */
+  transform: scale(1.05); /* Zoom in tombol */
+}
+
+
+  /* Modal Styling */
+  .modal {
+    display: none; /* Sembunyikan modal secara default */
+    position: fixed; 
+    z-index: 1000; /* Pastikan berada di atas konten lain */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Tambahkan scroll jika konten melebihi */
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+    overflow: hidden; /* Mencegah scroll pada modal */
+  }
+  
+  .modal-content {
+    background-color: white;
+    margin: 15% auto; /* Pusatkan modal */
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .btn-option {
+    display: inline-block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #319eb2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Tombol mengisi lebar modal */
+    text-align: center;
+  }
+  
+  .btn-option:hover {
+    background-color: #35abde;
+  }
+  
+  /* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .custom-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .card {
+        margin: 10px;
+    }
+
+    .card img {
+        height: 180px; /* Sesuaikan tinggi gambar */
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.85rem;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .btn-option {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .card {
+        margin: 8px;
+    }
+
+    .card img {
+        height: 160px; /* Sesuaikan gambar dengan layar lebih kecil */
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.8rem;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+
+    .btn-option {
+        font-size: 12px;
+    }
+}

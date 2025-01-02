@@ -1,0 +1,147 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+ <!-- AOS -->
+ <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+   <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+   <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+   <!-- link icon bostrap -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="{% static 'css/base.css' %}?v=1.0">
+  
+  
+</head>
+{% block head_block %} 
+{% endblock %}
+
+
+ <!--Navbar-->
+ <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'index' %}">
+        <img class="navbar-logo" src="{% static 'img/logo.png' %}" alt="Logo" /></a>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'gyu_app:index' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'gyu_app:about' %}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'gyu_app:course' %}">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'gyu_app:faqs' %}">FAQs</a>
+          </li>
+          
+        </ul>
+       <!-- SignIn / SignUp Buttons -->
+      <div class="d-flex">
+        {% if user.is_authenticated %}
+        <a class="btn btn-primary me-2" href="{% url 'logout' %}" role="button" id="btn-SignIn">Logout</a>
+        {% else %}
+        <a class="btn btn-primary me-2" href="{% url 'gyu_app:login' %}" role="button" id="btn-SignIn">SignIn</a>
+        {% endif %}
+        <a class="btn btn-primary" href="{% url 'gyu_app:signup' %}" role="button" id="btn-SignUp">SignUp</a>
+      </div>
+      </div>
+    </div>
+  </nav>
+  <!--End Navbar-->
+
+  
+  {% block body_block %}
+  {% endblock %}
+
+   <!-- Footer Section -->
+   <section id="footer-section" class="footer text-black">
+    <footer class="container p-5">
+      <div class="row">
+        <!-- Left Column (Logo, Title, and Description) -->
+        <div class="col-md-4">
+          <div class="d-flex align-items-center">
+            <img src="{% static 'img/logo.png' %}" alt="Logo">
+          </div>
+          <p>Where learning shapes futures and dreams become reality.</p>
+        </div>
+
+        <!-- Center Column (Address) -->
+        <div class="col-md-4">
+          <h5>Our Location</h5>
+          <p>
+            Jl. Letnan Soetopo, Ruko Golden Madrid 2, <br>
+            Blok F No.19, BSD City, <br>
+            Kec. Serpong, Kota Tangerang Selatan, Banten 15310
+          </p>
+          <p>Phone: (021) 564 786</p>
+          <p>Email: <a href="mailto:gyuenity15@gmail.com">gyuenity15@gmail.com</a></p>
+        </div>
+
+        <!-- Right Column (Social Media) -->
+        <div class="col-md-4 text-center">
+          <h5>Follow Us</h5>
+          <div class="social-icons">
+            <div class="row">
+              <div class="col-6">
+                <p>
+                  <i href="#" class="bi bi-facebook"></i>Facebook
+                </p>
+                <p>
+                  <i href= "" class="bi bi-instagram"></i> Instagram
+                </p>
+              </div>
+              <div class="col-6">
+                <p>
+                  <i href ="" class="bi bi-twitter"></i> Twitter
+                </p>
+                <p>
+                  <i href ="" class="bi bi-linkedin"></i> LinkedIn
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Bottom Copyright Section -->
+    <div class="text-center mt-5 bg-info p-3">
+      <p>&copy; 2024 Gyuenity. Learn Together, Grow Together.</p>
+    </div>
+    </div>
+  </section>
+
+  <!--Bootsrap icon-->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" />
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+{% extends 'gyu_app/base.html' %}
+{% load static %}
+
+{% block head_block %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}?v=1.0">
+{% endblock %}
+
+{% block body_block %}
+    <div class="login-container">
+        <h1>Login</h1>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Submit">
+        </form>
+
+        {% if error %}
+            <p class="error-message">{{ error }}</p>
+        {% endif %}
+
+        <p class="signup-link">Belum punya akun? <a href="{% url 'gyu_app:signup' %}">Daftar di sini</a></p>
+    </div>
+{% endblock %}

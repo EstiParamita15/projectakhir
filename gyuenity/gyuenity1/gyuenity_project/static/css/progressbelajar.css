@@ -1,0 +1,43 @@
+body {
+    background-color: #f9f9f9;
+  }
+  
+  h1 {
+    color: #343a40;
+  }
+  
+  .card-title {
+    font-weight: bold;
+  }
+  
+  .progress {
+    height: 20px;
+  }
+  
+  .progress-bar {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  .btn-primary {
+    font-size: 0.9rem;
+  }
+
+  .custom-button {
+    background: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+  margin-top: -20px;
+  position: absolute;
+    /*margin-right: auto;  Posisikan tombol di paling kiri */
+  left: 12px; /* Hilangkan padding kiri */
+    cursor: pointer;
+  }
+  .text-white {
+    color: white; /* Mengatur warna teks menjadi putih */
+  }
+  .custom-button:hover .custom-icon {
+    color: #007bff; /* Warna saat di-hover */
+  }  

@@ -1,0 +1,21 @@
+{% extends 'gyu_app/base.html' %}
+{% load static %}
+
+{% block head_block %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}?v=1.0">
+{% endblock %}
+
+{% block body_block %}
+<div class="main-content">
+    <div class="signup-container mt-5 ">
+        <h1>Sign Up</h1>
+        <form method="POST" action="">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit">
+        </form>
+
+        <p class="login-link">Sudah punya akun? <a href="{% url 'gyu_app:login' %}">Login di sini</a></p>
+    </div>
+</div>
+{% endblock %}

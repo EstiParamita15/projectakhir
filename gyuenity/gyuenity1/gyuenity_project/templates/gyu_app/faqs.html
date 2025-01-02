@@ -1,0 +1,242 @@
+{% extends 'gyu_app/base.html' %}
+{% load static %}
+
+{% block head_block %}
+<link rel="stylesheet" href="{% static 'css/faqs.css' %}">
+{% endblock %}
+
+{% block body_block %}
+<header class="hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12 hero-content text-center">
+                <h1 class="display-4 fw-bold mb-4">Get in Touch</h1>
+                <p class="lead mb-5 font-weight-500">
+                    We're here to help you on your journey. Reach out to us with any questions, concerns, or feedback.
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Contact Information Section -->
+            <div class="col-lg-6">
+                <h2 class="section-title mb-4">Contact Information</h2>
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3 class="h5 mb-1">Email</h3>
+                            <p class="mb-0">gyuenity15@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3 class="h5 mb-1">Phone</h3>
+                            <p class="mb-0">+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3 class="h5 mb-1">Address</h3>
+                            <p class="mb-0">
+                                Jl. Letnan Soetopo, Ruko Golden Madrid 2, <br>
+                                Blok F No.19, BSD City, Kec. Serpong, Kota Tangerang Selatan, Banten 15310
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="h4 mt-5 mb-3">Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/estiparamita_/profilecard/?igsh=MXhmMW5xa2x5NW9qcA=="><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Contact Form Section -->
+            <div class="col-lg-6">
+                <div class="contact-form">
+                    <h2 class="section-title mb-4">Send Us a Question</h2>
+                    <form id="contactForm" method="POST" action="{% url 'gyu_app:faqs' %}">
+                        {% csrf_token %}
+                        <!-- Name Field -->
+                        <div class="mb-3">
+                            <label for="name" class="form-label">
+                                <i class="fas fa-user"></i> Name
+                            </label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required />
+                        </div>
+                        <!-- Email Field -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">
+                                <i class="fas fa-envelope"></i> Email
+                            </label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required />
+                        </div>
+                        <!-- Contact Field -->
+                        <div class="mb-3">
+                            <label for="contact" class="form-label">
+                                <i class="fas fa-phone"></i> Contact Number
+                            </label>
+                            <input type="text" class="form-control" id="contact" name="contact" placeholder="Enter your contact number" required />
+                        </div>
+                        <!-- Message Field -->
+                        <div class="mb-3">
+                            <label for="message" class="form-label">
+                                <i class="fas fa-question-circle"></i> Question
+                            </label>
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Ask your question" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Question
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!--Membuat row faqs/ susunan bentuk horizontal-->
+    <section id="faqs-section">
+        <div class="faq-header text-center py-4">
+            <h1 class="text-center">Frequently Asked Questions</h1>
+        </div>
+        <div class="faq-container py-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="faq-list-left">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                Kursus apa saja yang tersedia di platform ini?
+                            </div>
+                            <div class="faq-answer">
+                                <p>
+                                    Layanan kami menyediakan kursus Pengembangan Web , Technopreneurship ,
+                                    dan Desain UI/UX yang dirancang untuk membantu Anda menguasai keterampilan
+                                    penting di era digital.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                Siapa yang dapat mengikuti kursus ini? ?
+                            </div>
+                            <div class="faq-answer">
+                                <p>
+                                    Kursus ini terbuka untuk semua orang, mulai dari pemula, pelajar,
+                                    mahasiswa, hingga profesional yang ingin meningkatkan keterampilan mereka di bidang
+                                    teknologi dan bisnis.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                Apakah kursus ini mencakup praktik langsung?
+                            </div>
+                            <div class="faq-answer">
+                                <p>
+                                Tentu saja! Kursus kami dirancang untuk memberikan pengalaman
+                                praktis melalui tugas, proyek, dan latihan coding yang nyata.  
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                Apakah kursus dapat diakses kapan saja?
+                            </div>
+                            <div class="faq-answer">
+                                <p>
+                                Ya, semua kursus kami tersedia secara online dan dapat diakses
+                                kapan saja, sehingga Anda dapat belajar sesuai jadwal Anda sendiri.  
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End row faqs kiri-->
+
+                <!--Start row faqs kanan-->
+                <div class="col-md-6">
+                    <div id="faq-list-right">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                Apa saja perangkat yang dibutuhkan untuk mengikuti kursus ini?
+                            </div>
+                            <div class="faq-answer">
+                                <p>
+                                Anda hanya memerlukan komputer atau laptop dengan akses internet yang stabil. 
+                                Untuk kursus coding, disarankan menggunakan browser modern dan text editor seperti VS Code.  
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                Bagaimana cara mendaftar di platform ini? 
+                            </div>
+                            <div class="faq-answer">
+                                <p>
+                                Anda hanya perlu membuat akun di platform kami, memilih kursus yang diinginkan, kemudian melakukan pembayaran 
+                                setelah itu langsung memulai perjalanan belajar Anda.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                Apa metode pembayaran yang tersedia?
+                            </div>
+                            <div class="faq-answer">
+                                <p>
+                                Kami menerima pembayaran melalui transfer bank, kartu kredit, e-wallet,
+                                dan metode pembayaran online lainnya.  
+                                </p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                Apa keuntungan belajar di Gyuenity?
+                            </div>
+                            <div class="faq-answer">
+                                <p>
+                                Anda akan belajar dengan mentor berpengalaman, mendapatkan akses ke materi terbaru, 
+                                dan kesempatan untuk membangun portofolio proyek yang dapat meningkatkan peluang karier.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End row faqs kanan-->
+<script>
+    document.getElementById('contactForm').addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+        });
+
+        const result = await response.json();
+        if (response.ok) {
+            alert(result.message);
+            form.reset();
+        } else {
+            alert(result.error);
+        }
+    });
+</script>
+
+{% endblock %}

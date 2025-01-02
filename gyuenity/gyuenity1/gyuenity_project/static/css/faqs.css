@@ -1,0 +1,226 @@
+
+.hero {
+    background: linear-gradient(rgba(138, 201, 246, 0.879), rgb(33, 169, 232));
+    color: white;
+    padding: 100px 0;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+        padding: 80px 0 100px;
+    }
+  }
+  
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-title::after { /*atur garis bawah contack info*/
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 400px;
+    height: 4px;
+    background-color: rgb(43, 123, 208);
+  }
+  
+  .contact-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-info-item i {
+    font-size: 1.5rem;
+    color: red;
+    margin-right: 1rem;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(42, 116, 181);
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    background-color: rgb(113, 183, 236);
+    transform: translateY(-3px);
+  }
+  
+  .contact-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-info-item i {
+    font-size: 1.5rem;
+    color: rgb(27, 27, 47);
+    margin-right: 1rem;
+  }
+  
+  .form-control {
+    border-radius: 10px;
+    /* Menambahkan sudut bulat pada input */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Efek bayangan pada input */
+    transition: border-color 0.3s;
+    /* Transisi warna border */
+  }
+  
+  input.form-control:focus, textarea.form-control:focus {
+    border-color: rgb(22, 163, 240);
+    box-shadow: 0 0 0 0.2rem rgba(22, 104, 163, 0.288);
+  }
+  
+  /* Gaya Formulir */
+  .form-label {
+    font-weight: bold;
+    /* Membuat label formulir menjadi tebal */
+  }
+  
+  
+  /* Section FAQ Full Width */
+  #faqs-section {
+    background-color: #fff; /* Warna putih untuk seluruh section FAQ */
+    width: 100vw; /* Memastikan lebar penuh */
+    padding-bottom: 40px; /* Padding atas dan bawah */
+    margin-left: calc(-50vw + 50%); /* Agar background full width */
+  }
+  
+  /* FAQ Header */
+  .faq-header {
+    color: #f15151;
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  /* FAQ Container */
+  .faq-container {
+    max-width: 1100px;
+    margin: 0 auto; /* Mengatur margin otomatis untuk pusat */
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  /* Styling untuk setiap item FAQ */
+  .faq-item {
+    flex: 1 1 calc(33.333%-30px);/*membuat ukuran colom sama yaitu 3 kolom per baris*/
+    background-color:#0aaaf4; /* Warna kolom */
+    color: black;/*warna teks*/
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* Mengatur tampilan pertanyaan FAQ */
+  .faq-question {
+    background-color: #0aaaf4;
+    color:black;
+    padding: 15px 20px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Efek hover pada pertanyaan */
+  .faq-item:hover {
+    transform: translateY(-8px);
+    /* Mengangkat card sedikit saat di-hover */
+    box-shadow: 0 8px 30px rgba(64, 66, 65, 0.954);
+    /* Efek bayangan */
+    border: 5px solid  #2c36fc80;
+    /* Border warna oranye */
+   
+  }
+  
+  /* Menambahkan ikon panah ke pertanyaan */
+  .faq-question::after {
+    content: "\25BC";
+    /* Unicode untuk panah ke bawah */
+    font-size: 12px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Styling untuk pertanyaan aktif */
+  .faq-question.active {
+    background:#98dcfb;
+    /* Warna tetap saat aktif */
+    color: black;
+  }
+  
+  /* Memutar ikon panah saat pertanyaan aktif */
+  .faq-question.active::after {
+    transform: rotate(-180deg);
+  }
+  
+  /* Mengatur tampilan jawaban FAQ */
+  .faq-answer {
+    background: #4e95f189;
+    /* Warna latar belakang jawaban */
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+  }
+  
+  /* Menampilkan jawaban saat aktif */
+  .faq-answer.active {
+    max-height: 1000px;
+    padding: 20px;
+  }
+  
+  /* Styling untuk teks jawaban */
+  .faq-answer p {
+    margin: 0;
+    line-height: 1.6;
+    color: #fff;
+    /* Warna teks jawaban */
+  }
+  
+ 

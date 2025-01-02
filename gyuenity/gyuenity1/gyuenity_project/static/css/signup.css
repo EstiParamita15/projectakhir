@@ -1,0 +1,113 @@
+/* Reset default margin and padding */
+body, h1, p, form, input, label {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main content - Center the form */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Signup container styling */
+.signup-container {
+    width: 100%;
+    max-width: 650px; /* Lebih lebar */
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title */
+.signup-container h1 {
+    margin-bottom: 20px;
+    color: #17a2b8;
+    text-align: center;
+}
+
+/* Form styling */
+.signup-container form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Label styling */
+.signup-container form label {
+    flex: 1 1 100%; /* Label memenuhi lebar container */
+    text-align: left;
+    font-weight: bold;
+    padding-bottom: 5px;
+    font-size: 16px;
+}
+
+/* Input styling */
+.signup-container form input {
+    flex: 1 1 100%; /* Input memenuhi lebar container */
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Help text (deskripsi di bawah input) */
+.signup-container form p.help-text {
+    flex: 1 1 100%; /* Help text memenuhi lebar container */
+    font-size: 14px;
+    color: #17a2b8;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+/* Submit button styling */
+.signup-container input[type="submit"] {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%; /* Tombol submit lebar penuh */
+    margin-top: 20px;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.signup-container input[type="submit"]:hover {
+    background-color: #55cbde;
+}
+
+/* Login link styling */
+.login-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.login-link a {
+    text-decoration: none;
+    color: #17a2b8;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Error message styling (if any) */
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}

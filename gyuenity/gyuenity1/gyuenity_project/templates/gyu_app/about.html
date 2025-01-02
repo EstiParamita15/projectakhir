@@ -1,0 +1,194 @@
+{% extends 'gyu_app/base.html' %}
+{% load static %}
+
+{% block head_block %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block body_block %}
+<section class="image-section">
+  <img src="{% static 'img/bg_about.png' %}" alt="bg" />
+  </section>
+
+<main id="siapakami" class="container">
+  <section class="text-center">
+    <div class="jumbotron text-center" style="margin-top: 100px">
+      <h1>Siapa Kami?</h1>
+      <img
+        src="{% static 'img/logo.png' %}"
+        alt="Logo Platform"
+        width="150"
+        height="150"
+      />
+      <p>
+        Gyuenity adalah platform edukasi digital yang dirancang untuk membangun 
+        keterampilan di dunia teknologi. Kami menawarkan kursus seperti Desain UI/UX, 
+        Web Development, dan Technopreneurship, yang disusun dengan standar industri terkini.
+        Dengan pendekatan pembelajaran fleksibel, sehingga bisa mengakses materi kapan saja, 
+        di mana saja, serta didukung oleh mentor berpengalaman yang akan membantu proses pembelajaran. 
+        Bersama Gyuenity, mari wujudkan masa depan di dunia digital!
+      </p>
+    </div>
+  </section>
+  <section class="text-center content2">
+    <h1>Visi</h1>
+    <article class="col-sm-8 mx-auto" style="text-align: center">
+      Menjadi platform pendidikan digital terpercaya yang menciptakan individu-individu kreatif, 
+      inovatif, kompeten, dan siap menghadapi tantangan dunia digital.
+    </article>
+    <br/>
+    <h1>Misi</h1>
+    <article class="col-sm-8 mx-auto" style="text-align: justify">
+      <ol>
+        <li>
+          Menghadirkan kursus yang dirancang sesuai dengan kebutuhan industri, 
+          fokus pada penguasaan keterampilan praktis dan relevan di bidang teknologi.
+        </li>
+        <li>
+          Menghadirkan mentor ahli di bidangnya untuk membantu peserta 
+          memahami materi secara mendalam dan memberikan wawasan terbaik.
+        </li>
+        <li>
+          Menciptakan lingkungan belajar yang mendukung kolaborasi, 
+          berbagi ide, dan pertukaran pengalaman antara para peserta dan mentor.
+        </li>
+        <li>
+          Memberikan akses mudah ke materi kapan saja dan di mana saja, 
+          sehingga peserta dapat belajar dengan ritme yang sesuai kebutuhan mereka.
+        </li>
+        <li>
+          Membantu peserta mengembangkan ide-ide baru dan 
+          berinovasi dalam membangun solusi teknologi yang berdampak positif.
+        </li>
+      </ol>
+    </article>
+  </section>
+  <hr class="divider" />
+  <section class="text-center">
+    <h1>Para Pengajar Kami</h1>
+    <p>
+      Kami memiliki mentor profesional yang siap membantu peserta mengatasi tantangan dan memaksimalkan potensi mereka.
+    </p>
+
+    <div
+      id="carouselTeachers"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <article class="pengajar-item shadow-box mx-auto">
+            <img
+              src="{% static 'img/bayu.jpg' %}"
+              alt="Mr. Bayu"
+              class="img-fluid rounded-circle mx-auto d-block"
+            />
+            <h3>Mr. Bayu</h3>
+            <p>
+            Pakar Web Development dengan pengalaman 10+ tahun, 
+            siap membimbing peserta memahami dunia coding secara mendalam.
+            </p>
+          </article>
+        </div>
+        <div class="carousel-item">
+          <article class="pengajar-item shadow-box mx-auto">
+            <img
+              src="{% static 'img/elina.jpg' %}"
+              alt="elina"
+              class="img-fluid rounded-circle mx-auto d-block"
+            />
+            <h3>Ms. Elina</h3>
+            <p>
+              Pakar UI/UX dengan pengalaman dalam desain aplikasi dan situs web,
+              membimbing peserta memahami pengalaman pengguna dan prototyping.
+
+
+            </p>
+          </article>
+        </div>
+        <div class="carousel-item">
+          <article class="pengajar-item shadow-box mx-auto">
+            <img
+              src="{% static 'img/aulia.jpg' %}"
+              alt="aulia"
+              class="img-fluid rounded-circle mx-auto d-block"
+            />
+            <h3>Ms. Aulia</h3>
+            <p>
+              Ahli UI/UX dengan pengalaman di industri desain digital. 
+              Ia memiliki keahlian dalam mengembangkan desain antarmuka yang halus dan menarik 
+            </p>
+          </article>
+        </div>
+
+        <div class="carousel-item">
+          <article class="pengajar-item shadow-box mx-auto">
+            <img
+              src="{% static 'img/dikta.jpg' %}"
+              alt="Mr. dikta"
+              class="img-fluid rounded-circle mx-auto d-block"
+            />
+            <h3>Mr. Dikta</h3>
+            <p>
+              Berpengalaman di Web Development dan Technopreneurship, 
+              membantu peserta membangun keterampilan praktis untuk dunia digital.
+            </p>
+          </article>
+        </div>
+
+        <div class="carousel-item">
+          <article class="pengajar-item shadow-box mx-auto">
+            <img
+              src="{% static 'img/vania.jpg' %}"
+              alt="vania"
+              class="img-fluid rounded-circle mx-auto d-block"/>
+            <h3>Ms. Vania</h3>
+            <p>
+              Dengan pengalaman membangun startup yang sukses, 
+              ia membimbing peserta mulai dari merancang model bisnis hingga strategi pemasaran yang efektif.
+            </p>
+          </article>
+        </div>
+
+        <div class="carousel-item">
+          <article class="pengajar-item shadow-box mx-auto">
+            <img
+              src="{% static 'img/andra.jpg' %}"
+              alt="Mr. andra"
+              class="img-fluid rounded-circle mx-auto d-block"
+            />
+            <h3>Mr. Andra</h3>
+            <p>
+              Ahli Full-Stack Development dengan fokus integrasi teknologi front-end dan back-end. 
+              Membimbing peserta membangun aplikasi web secara lengkap.
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselTeachers"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Sebelumnya</span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselTeachers"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Berikutnya</span>
+      </button>
+    </div>
+  </section>
+</main>
+
+ <!-- link js -->
+ <script src="{% static 'js/about.js' %}"></script>
+ {% endblock %}

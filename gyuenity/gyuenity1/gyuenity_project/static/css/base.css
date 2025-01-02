@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap");
+
+
+
+/* Reset untuk menghapus margin dan padding default */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Logo Responsif */
+.navbar-brand .navbar-logo {
+  max-height: 40px; /* Default size */
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand .navbar-logo {
+    max-height: 35px; /* Logo lebih kecil di layar kecil */
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand .navbar-logo {
+    max-height: 30px; /* Ukuran logo di layar extra kecil */
+  }
+}
+
+/* Gaya Global */
+body {
+  font-family: "Poppins", sans-serif;
+  /* Ganti font sesuai keinginan */
+  overflow-x: hidden;
+}
+
+/* Menyembunyikan scrollbar di Chrome, Safari, dan Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+nav {
+  box-shadow: 0px 5px 10px rgba(167, 167, 167, 0.541);
+  animation: transitionIn 0.4s ease;
+  /* Animasi transisi untuk navbar */
+}
+
+/* Mengatur margin untuk setiap item di navbar */
+nav ul li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Styling link dengan class .nav-link di dalam navbar */
+nav ul li a.nav-link {
+  text-decoration: none;
+  font-family: "Quicksand", cursive;
+  /* Font Quicksand untuk link utama */
+  font-weight: 700;
+  /* Ketebalan lebih pada teks */
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+  color:  #010101; /*warna teks menu navbar*/
+}
+
+/* Efek hover pada link */
+nav li a:hover {
+  transform: scale(1.04);
+  /* Membesarkan sedikit saat dihover */
+}
+
+/* Styling khusus saat hover untuk link dengan class .nav-link */
+nav ul li a.nav-link:hover {
+  color: #0aaaf4;
+  text-decoration: underline;
+  /* Menambahkan garis bawah saat hover */
+}
+
+
+.navbar-collapse .dropdown-menu {
+  margin-bottom: 15px;
+  font-family: "Quicksand", cursive;
+  /* Font Quicksand untuk link utama */
+}
+
+/* Mengatur warna latar belakang item dropdown saat dihover */
+.navbar-collapse .dropdown-menu .dropdown-item:hover {
+  background-color: white; /* Ubah sesuai warna biru yang Anda inginkan */
+  color: black; /* Ubah warna teks sesuai kebutuhan */
+  text-decoration: underline;
+}
+
+/* Styling tombol SignIn */
+#btn-SignIn {
+  font-weight: 600;
+  width: 85px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(89, 213, 224);
+  /* Warna latar tombol */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: black;
+}
+
+/* Hover effect untuk tombol SignIn */
+#btn-SignIn:hover {
+  transform: scale(1.05);
+  /* Membesarkan tombol */
+  background-color: white;
+  /* Ubah warna background saat hover */
+  color: rgb(89, 213, 224);
+  /* Ubah warna teks */
+}
+
+/* Styling tombol SignUp */
+#btn-SignUp {
+  font-weight: 600;
+  /* Ketebalan font */
+  width: 90px;
+  border: none;
+  /* Tidak ada border */
+  border-radius: 10px;
+  /* Membuat sudut membulat */
+  background-color: rgb(6, 158, 253);
+  /* Warna latar tombol */
+  cursor: pointer;
+  /* Ubah kursor saat dihover */
+  transition: all 0.3s ease;
+  /* Animasi saat dihover */
+  text-decoration: none;
+  color: black;
+  /* Warna teks */
+}
+
+/* Hover effect untuk tombol SignUp */
+#btn-SignUp:hover {
+  transform: scale(1.05);
+  background-color: rgb(255, 255, 255);
+  /* Ubah background jadi putih saat hover */
+  color:  rgb(35, 126, 237);
+  /* Ubah warna teks */
+}
+
+@media (max-width: 768px) {
+
+  #btn-SignIn,
+  #btn-SignUp {
+    display: block;
+    /* Buat tombol-tombol ini tampil dalam blok */
+    margin-bottom: 10px;
+    /* Tambahkan jarak di antara tombol saat di mode mobile */
+    width: 100%;
+    /* Buat tombol memenuhi lebar kontainer pada mode mobile */
+    text-align: center;
+    /* Pastikan teks di tengah */
+  }
+}
+
+/* Keyframe untuk animasi transisi navbar */
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+    /* Navbar muncul dari atas */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    /* Navbar muncul penuh */
+  }
+}
+/*end navbar*/
+
+
+/* footer */
+.footer {
+    background-color: #59D5E0;
+    color: #fff;
+    padding: 20px 0;
+    padding-bottom: 0%;
+    vertical-align: middle;
+  }
+  
+  .footer h4,
+  .footer h5 {
+    font-weight: bold;
+  }
+  
+  .footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .footer .col-md-4 {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  .footer a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    color: #ddd;
+    text-decoration: underline;
+  }
+  
+  .footer .social-icons {
+    display: flex;
+    justify-content: center;
+    /* Pusatkan konten secara horizontal */
+    align-items: center;
+    /* Pusatkan konten secara vertikal */
+    flex-direction: column;
+    /* Atur agar ikon berada di bawah satu sama lain */
+  }
+  
+  .footer .social-icons .row {
+    display: flex;
+    justify-content: center;
+    /* Pusatkan baris secara horizontal */
+    flex-wrap: wrap;
+    /* Memungkinkan isi untuk mengalir dalam beberapa baris */
+  }
+  
+  .footer .social-icons .col-6 {
+    display: flex;
+    flex-direction: column;
+    /* Pastikan ikon dan teks berada dalam kolom */
+    align-items: center;
+    /* Pusatkan teks dan ikon dalam kolom */
+  }
+  
+  .footer .social-icons p {
+    margin: 5px 0;
+    /* Mengatur jarak vertikal antar ikon */
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+  }
+  
+  .footer .social-icons i {
+    font-size: 24px;
+    margin-right: 10px;
+    /* Mengatur jarak antara ikon dan teks */
+  }
+  
+  .footer img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+  }
+  

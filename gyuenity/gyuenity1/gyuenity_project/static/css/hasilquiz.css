@@ -1,0 +1,18 @@
+.custom-button {
+    background: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+  margin-top: -20px;
+  position: absolute;
+    /*margin-right: auto;  Posisikan tombol di paling kiri */
+  left: 12px; /* Hilangkan padding kiri */
+    cursor: pointer;
+  }
+  .text-white {
+    color: white; /* Mengatur warna teks menjadi putih */
+  }
+  .custom-button:hover .custom-icon {
+    color: #007bff; /* Warna saat di-hover */
+  }  

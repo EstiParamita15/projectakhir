@@ -1,0 +1,61 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Warna latar belakang lembut */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Pusatkan secara vertikal */
+}
+
+.card {
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan efek bayangan */
+    border-radius: 10px; /* Sudut melengkung */
+    overflow: hidden;
+    background-color: #ffffff; /* Warna putih untuk kontras */
+}
+
+.card-header {
+    background-color: #00d1e4; /* Warna biru khas Bootstrap */
+    color: white;
+    font-size: 1.25rem;
+    text-align: center;
+    padding: 10px 15px;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333; /* Warna teks yang mudah dibaca */
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555; /* Warna teks lebih redup */
+}
+
+.btn {
+    display: inline-block;
+    width: 45%; /* Ukuran tombol seragam */
+    margin: 5px;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #00d1e4;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #00d1e4; /* Efek hover */
+}

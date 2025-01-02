@@ -1,0 +1,310 @@
+
+/* Hero section styles_content 1 */
+.hero {
+    background: linear-gradient(rgb(89, 213, 224), rgb(33, 169, 232));
+    padding: 7.6em 0;
+    /*tinggi bacground*/
+    margin-bottom: 5%;
+  }
+  
+  .hero-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .hero-text {
+    flex: 1;
+  }
+  
+  .hero-text h1 {
+    font-size: 3.2rem;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #4a38ee,#1c1b88 );
+    opacity: 95%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .hero-text p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-image {
+    flex: 1;
+  }
+  
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  @media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+    }
+    .hero-image {
+        order: -1;
+    }}
+  
+  /* Gaya untuk container gambar */
+  .service img {
+    width: 100%; /* Membuat gambar responsif terhadap kolom */
+    height: auto; /* Menjaga rasio aspek */
+    border-radius: 8px; /* Membuat sudut gambar sedikit melengkung */
+    object-fit: cover; /* Menjaga gambar tetap pas dalam kotak */
+  }
+  
+    .grid .img-thumbnail {
+      max-width: 100%; /* Membuat gambar menyesuaikan lebar kontainer */
+      height: 200px; /* Menyesuaikan tinggi gambar sesuai rasio aspek */
+      object-fit: cover; /* Membuat gambar tetap memenuhi area tanpa distorsi */
+      border: none; /* Opsional: Hilangkan border */
+      padding: 0; /* Hilangkan padding */
+      margin: auto; /* Opsional: Pusatkan gambar jika dibutuhkan */
+      margin-bottom: 20px;
+  }
+  
+  /* Tambahkan gaya responsif untuk layar kecil */
+  @media (max-width: 768px) {
+      .grid .img-thumbnail {
+          width: 90%; /* Atur ukuran lebih kecil untuk layar kecil */
+          height: auto; /* Tetap menjaga rasio aspek */
+      }
+  }
+  
+  
+  .col-lg-4 .service {
+    margin-top: 30px
+  }
+  
+  .col-lg-4 .service:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  
+  @media (max-width: 576px) {
+    .carousel-item .col-lg-4 {
+      max-width: 100%;
+      flex: none;
+      margin-bottom: 20px;
+    }
+  
+    .carousel-item .service {
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (min-width: 577px) {
+    .carousel-item .col-lg-4 {
+      max-width: 100%;
+      flex: none;
+      margin-bottom: 20px;
+    }
+  
+    .carousel-item .service {
+      margin-bottom: 20px;
+    }
+  }
+  
+  /*content 3 */
+  .content-3 h1 {
+    font-size: 37px;
+    font-weight: 650;
+    background: linear-gradient(to right,#011f46,#15a6f5);
+    opacity: 95%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .content-3 .row h5 {
+    color:  #01121c;
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 90%;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .content-3 .row,
+  .h5 .p .a {
+    max-width: 1200px;
+    text-align: start;
+  }
+  
+  .content-3 h3 {
+    font-size: 27px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    color:#0055C8;
+    opacity: 90%;
+    letter-spacing: 1px;
+  }
+  
+  .content-3 .row p {
+    font-size: 17px;
+    color: #0e223e;;
+    font-family: "Poppins", sans-serif;
+    opacity: 80%;
+    font-weight: 300;
+    letter-spacing: 0.4px;
+  }
+  
+  
+  .content-4 h3,
+  .content-4 h1 {
+    font-size: 25px;
+    font-weight: 600;
+    background: linear-gradient(to right, #011f46,  #3281e9);
+    opacity: 95%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+  }
+  
+  .content-4 h1 {
+    font-size: 37px;
+    font-weight: 650;
+  }
+  
+  /* Testimonial Card Styles */
+  .testimonial-card {
+    position: relative;
+    background-color: white;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px 4px 10px rgba(0, 0, 0, 0.2), 0px 6px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    height: 500px;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+    background-color: #15a6f5;
+  }
+  
+  .testimonial-card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:#fff;
+    opacity: 90%;
+    border-radius: 20px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .testimonial-card:hover .overlay {
+    opacity: 30%;
+  }
+  
+  .testimonial-card .content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .testimonial-text {
+    letter-spacing: 0.3px;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 90%;
+    text-align: justify;
+  }
+  
+  .testimonial-author {
+    margin-top: 10px;
+    font-weight: 650;
+    opacity: 90%;
+  }
+  
+  /* Button Styles */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: #011f46;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel-control-prev-icon:hover,
+  .carousel-control-next-icon:hover {
+    background-color: #0056b3;
+    /* Warna saat hover */
+  }
+  
+  /* Read More Button */
+  .hidden-text {
+    display: none;
+  }
+  
+  .read-more-btn {
+    color: #011f46;
+    opacity: 90%;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 650;
+    border: none;
+    background: none;
+    padding: 0;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+  }
+  
+  .read-more-btn:hover {
+    color: #0056b3;
+    /* Warna saat hover */
+    opacity: 70%;
+    text-decoration: none;
+  }
+  
+  .company-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50; /* Mengurangi margin atas */
+   
+  }
+  .company-logos img {
+    height: 40px; 
+    opacity: 0.7; 
+  }
+  .trusted-companies {
+    margin-bottom: 20px; /* Menambahkan jarak bawah */
+    padding-bottom: 20px; /* Opsional */
+  }
+
+/* icon scroll top */
+.scrolltop {
+    display: none; 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background-color: #ffc107;
+    color: white;
+    padding: 10px;
+    width: 50px;  
+    height: 50px; 
+    border-radius: 50%; 
+    text-align: center;
+    line-height: 30px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease; 
+  }
+  
+  .scrolltop:hover {
+    background-color: #e0a800; 
+  }
+  
+  .bi-arrow-up-circle {
+    font-size: 24px; 
+  }
+  /*icom scroll top end*/

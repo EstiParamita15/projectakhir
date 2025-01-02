@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap");
+
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  
+}
+:root {
+  /* kelompokkan warna dengan kode */
+  --bg-color: #fff;
+  --text-color1: #1f1f21;
+  --text-color2: #fff;
+  --main-color: #15a6f5;
+  --bg-opacity: #fffefa;
+  --big-font: 3rem;
+  --title-font: 40px;
+  --p-font: 1rem;
+}
+
+body {
+  /* Pengaturan umum untuk body */
+  background-color: white;
+  background-size: cover;
+  height: 0vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+/* ISI MENU ABOUT US */
+/* Mengatur background image */
+.image-section { 
+            position: relative;
+            /* Menetapkan posisi elemen relatif terhadap posisinya sendiri. */
+            height: 50vh;
+            /* Menentukan tinggi elemen 50% dari tinggi viewport. */
+            overflow: hidden;
+            /* Menyembunyikan konten yang melebihi batas elemen. */
+        }
+.image-section img {
+            width: 100%;
+            /* Gambar melebar penuh sesuai dengan ukuran kontainer. */
+            height: 100%;
+            /* Gambar meninggi penuh sesuai dengan ukuran kontainer. */
+            object-fit: cover;
+            /* Gambar tidak terdistorsi dan mengisi seluruh area tanpa mengubah rasio. */
+        }
+.about-us-container {
+  /* Gaya untuk kontainer 'About Us' */
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.jumbotron {
+  /* Gaya untuk jumbotron siapa kami */
+  margin: 0 auto;
+  max-width: 900px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 100px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px 4px 10px rgba(0, 0, 0, 0.2),
+    0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.jumbotron h1 {
+  /* Gaya untuk judul dalam jumbotron siapa kami */
+  font-size: 3em;
+  font-weight: bold;
+  color: #3a3a3a;
+}
+
+.jumbotron img {
+  /* Gaya untuk gambar logo dalam jumbotron siapa kami */
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+            /* Ukuran logonya mengecil jika layar HP */
+            .jumbotron img {
+                max-width: 100px;
+                max-height: 100px;
+            }
+        }
+
+.jumbotron p {
+  /* Gaya untuk paragraf dalam jumbotron siapa kami */
+  font-size: 1.2em;
+  line-height: 1.6em;
+  color: #555;
+  text-align: justify;
+}
+
+.content2 {
+  /*Mengatur background kayu pada visi misi*/
+  background-image: url(../img/uiux.jp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 40px 20px;
+  margin: 20px 0;
+  border-radius: 15px;
+}
+
+/*GURUUUUUUU*/
+.shadow-box {
+  /* Efek box-shadow pada guru dan galeri*/
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2), -4px 4px 10px rgba(0, 0, 0, 0.2),
+    0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pengajar-item {
+  /*Mengatur konten pada box carousel guru*/
+  width: 500px;
+  padding: 20px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.pengajar-item img {
+  /*Mengatur foto guru*/
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 3.5px solid #007bff;
+  margin-bottom: 15px;
+}
+
+#detail {
+  /*Rata kanan kiri untuk detail deskripsi*/
+  text-align: justify;
+}
+
+.additional-info {
+  /*Mengatur jarak antara tulisan informasi selengkapnya dengan bawahnya*/
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  display: none;
+}
+
+.text-center h1 {
+  /*Mengatur huruf judul h1*/
+  font-size: 37px;
+  font-weight: 650;
+  background: linear-gradient(to right, #011f46, var(--main-color));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.divider {
+  /*Garis pemisah*/
+  border: none;
+  height: 2px;
+  background-color: #007bff;
+  margin: 40px 0;
+}
+
+/*Agar ukuran foto pada guru dan galeri responsif*/
+@media (max-width: 768px) {
+  .pengajar-item {
+    width: 90%;
+    /* Lebar yang lebih besar pada tampilan mobile */
+  }
+
+}
+
+@media (min-width: 769px) {
+  .pengajar-item {
+    width: 500px;
+    /* Lebar default untuk laptop */
+  }
+}
+
+/*Tulisan pada informasi selengkapnya*/
+.more-info {
+  color: #011f46;
+  opacity: 90%;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 650;
+  border: none;
+  background: none;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.more-info:hover {
+  color: #011f46;
+  opacity: 70%;
+  text-decoration: none;
+}
+
+/*MENGATUR CAROUSEL*/
+.carousel-control-prev {
+  left: 20px;
+  /* Menggeser tombol previous lebih dekat ke konten */
+}
+
+.carousel-control-next {
+  right: 20px;
+  /* Menggeser tombol next lebih dekat ke konten */
+}
+
+.carousel-inner {
+  /*Mengatur jarak antara carousel dengan tulisan diatasnya*/
+  padding: 20px 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  /*Mengatur ikon untuk menggeser carousel*/
+  background-color: rgba(0, 0, 0, 0.248);
+  border-radius: 50%;
+}
+

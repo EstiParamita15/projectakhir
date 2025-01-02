@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modul 1 : Front End Introduction</title>
+  <link rel="stylesheet" href="{% static 'css/matericlass.css' %}">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <!-- Navbar Utama -->
+  <nav class="navbar navbar-expand-lg bg-info py-3">
+    <div class="container d-flex align-items-center">
+        <a href="{% url 'gyu_app:class1' %}">
+        <button class="custom-button me-2">
+          <i class="bi bi-arrow-left custom-icon"></i>
+        </button>
+      </a>
+      <div class="center-container flex-grow-1 d-flex justify-content-center align-items-center">
+        <h5 class="text-white fw-bold mb-0">Front End Introduction</h5>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Kartu di luar kontainer -->
+  <div class="card w-100 mt-0 mb-3"> <!-- Menggunakan w-100 untuk lebar penuh -->
+    <div class="video-container" style="margin-bottom: 0px ;"> <!-- Mengurangi jarak bawah video -->
+      <iframe 
+      width="660" 
+      height="415" 
+      src="https://www.youtube.com/embed/{{ video_id }}" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+  </iframe>
+  </div>
+  <div class="card-body" style="padding-top: -10px;"> <!-- Mengurangi padding atas deskripsi -->
+      <h5 class="card-title">Deskripsi Video</h5>
+      <p>Video berjudul "Frontend End Web Development" ini dibuat oleh channel Web Programing UNPAS. Video tersebut membahas tentang pengembangan web frontend.</p>
+      <h5 class="card-title">Detail Materi Pembelajaran</h5>
+        <ul>
+          <li>
+            Memahami komponen-komponen dari sebuah platform pendidikan.
+          </li>
+          <li>
+            Pengenalan tentang HTML, CSS, dan JavaScript untuk pengembangan web.
+          </li>
+          <li>
+            Pengenalan tentang Lingkungan Pengembangan
+          </li>
+        </ul> 
+        
+        <div class="d-flex justify-content-between align-items-center">
+          <a href="{% url 'gyu_app:class1' %}" class="btn">Kembali</a>
+          <a href="https://wa.me/085707319847" class="btn" target="_blank">Hubungi Mentor</a>
+          <a href="{% static 'pdf/frontend.pdf' %}" id="middle-btn" class="btn" download >Download Materi</a>
+          <a href="{% url 'gyu_app:quizm1class1' %}" class="btn" >Kerjakan Quiz</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
